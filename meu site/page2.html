@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interações Profissionais</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hearts"></div>
+
+<div class="container">
+
+  <!-- Primeira pegadinha -->
+  <section class="card">
+    <h2>Aperte o botão:</h2>
+
+    <!-- Botão de pegadinha (cima) -->
+    <button class="btn" id="btnTop">Aperte o botão</button>
+    <div class="message" id="msgTop"></div>
+
+    <!-- Botão correto (embaixo) -->
+    <button class="btn" id="btnBottom">Clique aqui</button>
+    <div class="message" id="msgBottom"></div>
+
+    <div class="opinion-container" id="opinion1Container">
+      <label for="opinion1">Deixe sua opinião sobre isso:</label>
+      <textarea id="opinion1" placeholder="Escreva aqui..."></textarea>
+    </div>
+  </section>
+
+  <!-- Pegadinha extra -->
+  <section class="card">
+    <button class="btn" id="funBtn">Deixei uma mensagem pra você, aperta aqui pra vê</button>
+    <div class="message" id="funMsg"></div>
+  </section>
+
+  <!-- Opinião final -->
+  <section class="card">
+    <h2>Gostou do que fiz? Deixe sua humilde opinião:</h2>
+    <textarea id="opinion2" placeholder="Escreva aqui..."></textarea>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Reset e tipografia */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color:#ffb6c1; color:#333; position:relative; overflow-x:hidden; }
+
+/* Container centralizado */
+.container { max-width:800px; margin:0 auto; padding:50px 20px; display:flex; flex-direction:column; gap:40px; }
+
+/* Cartões de seções */
+.card {
+  background-color: rgba(255,255,255,0.95);
+  border-radius:15px;
+  padding:30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-5px); }
+
+h2 { font-size:2em; margin-bottom:15px; color:#d1005f; }
+p { font-size:1.2em; margin-bottom:20px; }
+
+/* Botões */
+.btn { padding:15px 35px; font-size:1em; border-radius:10px; border:none; cursor:pointer; margin:10px 5px; transition: all 0.3s; background: linear-gradient(45deg, #ff69b4, #ff85c1); color:white; box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.btn:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
+.btn-group { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; }
+
+/* Mensagens */
+.message { margin-top:20px; font-size:1.2em; color:#d1005f; min-height:30px; opacity:0; transition: opacity 0.5s; }
+.message.show { opacity:1; }
+
+/* Opiniões */
+.opinion-container, textarea { width:100%; }
+.opinion-container { margin-top:20px; display:none; }
+textarea { width:100%; padding:12px; border-radius:10px; border:1px solid #d1005f; resize:none; font-size:1em; outline:none; transition: border 0.3s; }
+textarea:focus { border-color:#ff69b4; }
+
+/* Corações animados */
+.hearts { position:fixed; width:100%; height:100%; top:0; left:0; pointer-events:none; overflow:hidden; z-index:0; }
+.hearts::before, .hearts::after { content:'❤❤❤❤❤'; position:absolute; font-size:2em; color:rgba(255,255,255,0.3); animation:float 15s linear infinite; }
+.hearts::after { left:50%; animation-delay:7s; }
+@keyframes float { 0% { transform:translateY(100vh) rotate(0deg); } 100% { transform:translateY(-100vh) rotate(360deg); } }
